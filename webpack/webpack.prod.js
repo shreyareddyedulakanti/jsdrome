@@ -20,7 +20,7 @@ module.exports = {
       },
     ],
   },
-  mode: 'development',
+  mode: 'production',
   plugins: [
     new HtmlWebpackPlugin({
       title: 'My website',
