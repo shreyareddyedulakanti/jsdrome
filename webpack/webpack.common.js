@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-//const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const Visualizer = require('webpack-visualizer-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
@@ -28,7 +28,7 @@ module.exports = {
       title: 'My website',
       template: './templates/client.html',
     }),
-    //new CleanWebpackPlugin(),
+    new CleanWebpackPlugin(),
     new Visualizer(),
     new BundleAnalyzerPlugin({
       openAnalyzer: false,
