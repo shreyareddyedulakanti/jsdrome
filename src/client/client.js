@@ -4,7 +4,7 @@ import Details from './person-details';
 
 const name = {
   firstname: "Shreya",
-  lastname: "Reddy"
+  lastname: "Reddy",
 }
 
 class App extends Component {
