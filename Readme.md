@@ -5,7 +5,7 @@
   - New project initiation using npm
   - EditorConfig (For editor rules)
   - Eslint
-  - Entry point file (client.js)
+  - Entry point file
   - Babel
   - Webpack
   - Firebase (google Firebase)
