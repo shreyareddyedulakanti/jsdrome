@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import Details from './person-details';
+import Person from './person';
 
 const name = {
   firstname: "Shreya",
@@ -12,7 +12,7 @@ class App extends Component {
     return (
       <div>
         <h1>JS Drome</h1>
-        <Details name={name}/>
+        <Person name={name}/>
       </div>
     );
   }
