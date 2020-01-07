@@ -9,10 +9,10 @@ class Counter extends Component {
   }
 
   multiplyME = () => {
-    var a = 2;
-    return this.setState({
+    const a = 2;
+    this.setState({
       num: this.state.num * a,
-    });
+    })
   }
 
   render() {
