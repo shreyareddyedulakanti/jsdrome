@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const Visualizer = require('webpack-visualizer-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -21,6 +22,15 @@ module.exports = {
           loader: 'babel-loader',
         },
       },
+      {
+        test: /\.css$/i,
+        exclude: /node_modules/,
+        use: [ 'style-loader', 'css-loader' ],
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [ 'file-loader', 'url-loader' ],
+      },
     ],
   },
   plugins: [
@@ -35,5 +45,8 @@ module.exports = {
       analyzerMode: 'static',
       reportFilename: 'bundle.html',
     }),
+    new CopyWebpackPlugin([
+      { from: './assets/', to: 'assets/' },
+    ]),
   ],
 };
